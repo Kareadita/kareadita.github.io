@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 text-center mt-5 mt-lg-0" data-parallax="0.15">
-                    <img id="hero-image" src="about:blank" alt="Kavita on devices" class="img-fluid hero-image-transition hero-image-hidden" style="max-width: 100%; border-radius: 5px; box-shadow: 0 20px 60px var(--shadow);">
+                    <img fetchpriority=high id="hero-image" src="about:blank" alt="Kavita on devices" class="img-fluid hero-image-transition hero-image-hidden" style="max-width: 100%; border-radius: 5px; box-shadow: 0 20px 60px var(--shadow);">
                 </div>
             </div>
         </div>
@@ -350,7 +350,7 @@
                 <div class="code-example" role="region" aria-labelledby="developer-example-title">
                     <h3 id="developer-example-title" class="visually-hidden">API quick example</h3>
                     <pre tabindex="0" aria-label="JavaScript code example"><code class="language-javascript">// Example: Get your libraries
-fetch('/api/Library')
+fetch('/api/library')
   .then(response => response.json())
   .then(data => console.log(data));</code></pre>
                 </div>
