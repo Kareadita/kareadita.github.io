@@ -8,14 +8,51 @@ async function fetchActiveInstalls() {
     try {
         const response = await fetch('https://stats.kavitareader.com/api/ui/shield-badge');
         const data = await response.json();
-        document.getElementById('active-installs').textContent = data.message;
+        // Update live region value and aria-busy
+        setActiveInstalls(data.message);
     } catch (error) {
         console.error('Error fetching active installs:', error);
-        document.getElementById('active-installs').textContent = '53K+';
+        setActiveInstalls('53K+');
     }
 }
 
 fetchActiveInstalls();
+
+// Helper: centralize updating the active installs display and spinner visibility
+function setActiveInstalls(message) {
+    const installsEl = document.getElementById('active-installs');
+    const installsDisplay = document.getElementById('active-installs-display');
+    const hidden = document.getElementById('active-installs-value');
+
+    const normalized = (typeof message === 'string') ? message.trim() : '';
+
+    // Update visible and hidden text
+    if (installsDisplay) installsDisplay.textContent = message;
+    if (hidden) hidden.textContent = `Active installs: ${message}`;
+
+    // If we have a non-empty, non-whitespace value, hide/remove the spinner
+    if (normalized.length > 0) {
+        if (installsEl) installsEl.setAttribute('aria-busy', 'false');
+        try {
+            if (installsEl) {
+                const spinner = installsEl.querySelector('.stat-loading');
+                if (spinner && spinner.parentNode) spinner.parentNode.removeChild(spinner);
+            }
+        } catch (e) {}
+    } else {
+        // No content yet: ensure aria-busy is true and spinner is present
+        if (installsEl) installsEl.setAttribute('aria-busy', 'true');
+        try {
+            if (installsEl && !installsEl.querySelector('.stat-loading')) {
+                const i = document.createElement('i');
+                i.className = 'fas fa-spinner fa-spin stat-loading';
+                i.setAttribute('aria-hidden', 'true');
+                // insert at start
+                installsEl.insertBefore(i, installsEl.firstChild);
+            }
+        } catch (e) {}
+    }
+}
 
 // Theme toggle
 function toggleTheme() {
@@ -40,6 +77,20 @@ function toggleTheme() {
     updateHeroImageForTheme(newTheme);
 }
 
+// Accessibility: ensure skip link moves focus to main and announce
+document.addEventListener('DOMContentLoaded', () => {
+    const skip = document.querySelector('.skip-link');
+    const main = document.getElementById('main-content');
+    if (skip && main) {
+        skip.addEventListener('click', (e) => {
+            // allow anchor default behavior in case of keyboard navigation
+            setTimeout(() => {
+                main.focus({ preventScroll: false });
+            }, 0);
+        });
+    }
+});
+
 // Initialize theme from localStorage or system preference
 function initTheme() {
     const savedTheme = localStorage.getItem('theme');
@@ -61,35 +112,38 @@ function initTheme() {
     updateHeroImageForTheme(theme);
 }
 
+// Respect user preference for reduced motion
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 // Image rotation
 const lightImages = [
-    '/img/hero/homepage-light2.png',
-    '/img/hero/homepage-light3.png',
-    '/img/hero/homepage-light4.png',
-    '/img/hero/homepage-light5.png',
-    '/img/hero/homepage-light6.png',
-    '/img/hero/homepage-light7.png',
-    '/img/hero/homepage-light8.png',
-    '/img/hero/homepage-light9.png',
-    '/img/hero/homepage-light10.png',
-    '/img/hero/homepage-light11.png',
-    '/img/hero/homepage-light12.png',
-    '/img/hero/homepage-light13.png',
-    '/img/hero/homepage-light14.png',
-    '/img/hero/homepage-light15.png'
+    'img/hero/homepage-light2.png',
+    'img/hero/homepage-light3.png',
+    'img/hero/homepage-light4.png',
+    'img/hero/homepage-light5.png',
+    'img/hero/homepage-light6.png',
+    'img/hero/homepage-light7.png',
+    'img/hero/homepage-light8.png',
+    'img/hero/homepage-light9.png',
+    'img/hero/homepage-light10.png',
+    'img/hero/homepage-light11.png',
+    'img/hero/homepage-light12.png',
+    'img/hero/homepage-light13.png',
+    'img/hero/homepage-light14.png',
+    'img/hero/homepage-light15.png'
 ];
 
 const darkImages = [
-    '/img/hero/homepage-dark2.png',
-    '/img/hero/homepage-dark3.png',
-    '/img/hero/homepage-dark4.png',
-    '/img/hero/homepage-dark5.png',
-    '/img/hero/homepage-dark6.png',
-    '/img/hero/homepage-dark7.png',
-    '/img/hero/homepage-dark8.png',
-    '/img/hero/homepage-dark9.png',
-    '/img/hero/homepage-dark10.png',
-    '/img/hero/homepage-dark11.png'
+    'img/hero/homepage-dark2.png',
+    'img/hero/homepage-dark3.png',
+    'img/hero/homepage-dark4.png',
+    'img/hero/homepage-dark5.png',
+    'img/hero/homepage-dark6.png',
+    'img/hero/homepage-dark7.png',
+    'img/hero/homepage-dark8.png',
+    'img/hero/homepage-dark9.png',
+    'img/hero/homepage-dark10.png',
+    'img/hero/homepage-dark11.png'
 ];
 
 // Utility: shuffle an array (Fisher-Yates) and create shuffled copies for the carousel
@@ -153,12 +207,25 @@ function rotateImage() {
 }
 
 function initImageRotation() {
-    setInterval(rotateImage, 9000); // Rotate every 5 seconds
+    // Only auto-rotate if the user hasn't requested reduced motion
+    if (prefersReducedMotion) return;
+    setInterval(rotateImage, 9000); // Rotate every 9 seconds
 }
 
 initTheme();
 
-initImageRotation();
+// If user prefers reduced motion, reveal a single hero image and skip rotation/parallax
+if (prefersReducedMotion) {
+    // Make sure hero image is shown (no carousel)
+    try {
+        if (heroImage) {
+            heroImage.classList.remove('hero-image-hidden');
+            heroImage.style.opacity = '1';
+        }
+    } catch (e) {}
+} else {
+    initImageRotation();
+}
 
 // Parallax Effect
 function parallaxEffect() {
@@ -182,6 +249,7 @@ function parallaxEffect() {
 // Smooth parallax with requestAnimationFrame
 let ticking = false;
 window.addEventListener('scroll', () => {
+    if (prefersReducedMotion) return; // skip parallax for motion-sensitive users
     if (!ticking) {
         window.requestAnimationFrame(() => {
             parallaxEffect();
@@ -220,12 +288,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // ignore if extra features not present
     }
 
-    // Animate both feature-card and extra-feature-card with a stagger
+    // Animate both feature-card and extra-feature-card with a stagger (skip if prefers reduced motion)
     const cards = document.querySelectorAll('.feature-card, .extra-feature-card');
     cards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = `all 0.6s ease ${index * 0.01}s`;
-        observer.observe(card);
+        if (prefersReducedMotion) {
+            card.style.opacity = '1';
+            card.style.transform = 'none';
+        } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `all 0.6s ease ${index * 0.01}s`;
+            observer.observe(card);
+        }
     });
 });
