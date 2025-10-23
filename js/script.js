@@ -63,33 +63,33 @@ function initTheme() {
 
 // Image rotation
 const lightImages = [
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-light2.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-light3.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-light4.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-light5.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-light6.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-light7.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-light8.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-light9.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-light10.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-light11.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-light12.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-light13.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-light14.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-light15.png'
+    '/img/hero/homepage-light2.png',
+    '/img/hero/homepage-light3.png',
+    '/img/hero/homepage-light4.png',
+    '/img/hero/homepage-light5.png',
+    '/img/hero/homepage-light6.png',
+    '/img/hero/homepage-light7.png',
+    '/img/hero/homepage-light8.png',
+    '/img/hero/homepage-light9.png',
+    '/img/hero/homepage-light10.png',
+    '/img/hero/homepage-light11.png',
+    '/img/hero/homepage-light12.png',
+    '/img/hero/homepage-light13.png',
+    '/img/hero/homepage-light14.png',
+    '/img/hero/homepage-light15.png'
 ];
 
 const darkImages = [
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-dark2.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-dark3.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-dark4.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-dark5.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-dark6.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-dark7.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-dark8.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-dark9.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-dark10.png',
-    'https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/homepage-dark11.png'
+    '/img/hero/homepage-dark2.png',
+    '/img/hero/homepage-dark3.png',
+    '/img/hero/homepage-dark4.png',
+    '/img/hero/homepage-dark5.png',
+    '/img/hero/homepage-dark6.png',
+    '/img/hero/homepage-dark7.png',
+    '/img/hero/homepage-dark8.png',
+    '/img/hero/homepage-dark9.png',
+    '/img/hero/homepage-dark10.png',
+    '/img/hero/homepage-dark11.png'
 ];
 
 // Utility: shuffle an array (Fisher-Yates) and create shuffled copies for the carousel
