@@ -417,7 +417,7 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
 }
 
 .stat-number {
-    font-size: clamp(1.6rem, 6vw, 3rem);
+    font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 800;
     margin-bottom: 0.5rem;
     line-height: 1;
@@ -437,7 +437,7 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
     }
 
     .stat-number {
-        font-size: 1.5rem;
+        font-size: 3rem;
     }
 }
 
@@ -595,12 +595,12 @@ section {
 .kavita-plus-features .feature-icon {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    background: linear-gradient(135deg, #FFD700, #FFA500);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #000;
     font-size: 1.2rem;
     flex-shrink: 0;
 }
@@ -667,6 +667,7 @@ subscription-info i {
     padding: 3rem 2rem;
     border-radius: 25px;
     border: 2px solid var(--border-color);
+    border-top: 5px solid #FFD700; /* Gold streak */
     box-shadow: 0 18px 45px rgba(0,0,0,0.12);
     position: relative;
     z-index: 3; /* ensure CTA is above decorative overlays */
@@ -703,8 +704,8 @@ subscription-info i {
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: white;
+    background: #FFD700;
+    color:#000;
     padding: 0.35rem 1rem; /* reduced padding */
     border-radius: 18px;
     font-size: 0.75rem;
@@ -716,7 +717,7 @@ subscription-info i {
 }
 
 .kavita-plus-cta h4 {
-    color: var(--primary);
+    color: #FFD700;
     margin-bottom: 0.5rem;
     margin-top: 1rem;
     font-size: 1.5rem;
@@ -743,7 +744,7 @@ subscription-info i {
 .price {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color: #FFD700;
     line-height: 1;
 }
 
@@ -764,7 +765,7 @@ subscription-info i {
 }
 
 .coupon-code strong {
-    color: var(--primary);
+    color: #FFD700;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
@@ -777,25 +778,38 @@ subscription-info i {
 }
 
 .kavita-plus-cta .btn {
-    box-shadow: 0 4px 15px rgba(74, 198, 148, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
     transition: all 0.3s ease;
 }
 
 .kavita-plus-cta .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(74, 198, 148, 0.4);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
 }
 
 .kavita-plus-cta .btn-outline-custom {
-    border-color: var(--primary-dark);
-    color: var(--text-primary);
+    border-color: #FFD700;
+    color: #FFD700;
     background: transparent;
 }
 
+.kavita-plus-cta .btn-primary-custom {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    border-color: #FFD700;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.kavita-plus-cta .btn-primary-custom:hover {
+    background: linear-gradient(135deg, #FFA500, #FFD700);
+    border-color: #FFA500;
+    color: #000;
+}
+
 .kavita-plus-cta .btn-outline-custom:hover {
-    background: var(--primary-dark);
-    color: white;
-    border-color: var(--primary-dark);
+    background: #FFD700;
+    color: #000;
+    border-color: #FFD700;
 }
 
 .kavita-plus-cta .text-muted {
@@ -807,6 +821,30 @@ subscription-info i {
         margin-left: 2rem;
         margin-right: auto;
     }
+}
+
+/* Light theme overrides for Kavita+ gold elements to meet WCAG contrast */
+[data-theme="light"] .kavita-plus-cta h4 {
+    color: #B8860B;
+}
+
+[data-theme="light"] .price {
+    color: #B8860B;
+}
+
+[data-theme="light"] .coupon-code strong {
+    color: #B8860B;
+}
+
+[data-theme="light"] .kavita-plus-cta .btn-outline-custom {
+    border-color: #B8860B;
+    color: #B8860B;
+}
+
+[data-theme="light"] .kavita-plus-cta .btn-outline-custom:hover {
+    background: #B8860B;
+    color: #000;
+    border-color: #B8860B;
 }
 
 /* Developer Section */
