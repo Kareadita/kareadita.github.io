@@ -426,9 +426,10 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
 }
 
 .stat-label {
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-size: clamp(0.9rem, 2.5vw, 1.4rem);
     text-align: center;
     margin-top: 0.25rem;
+    font-weight: bold;
 }
 
 @media (max-width: 480px) {
