@@ -1,422 +1,431 @@
-<!doctype html>
-<html lang="en" role="main">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Kavita</title>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P27D95G');
-    </script>
-    <!-- End Google Tag Manager -->
-    <title>Kavita</title>
-    <meta name="description" content="Lighting fast with a slick design, Kavita is a rocket fueled self-hosted digital library which supports a vast array of file formats. Install to start reading and share your server with your friends. book reader, self hosted, manga, comics, free, manhwa, e readers, electronic book readers, digital book reader, cartoon" />
-    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
-    <meta name=viewport content="width=device-width, initial-scale=1.0">
-    <link rel=stylesheet type=text/css href=//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css>
-    <link rel=stylesheet type=text/css href=css/bootstrap-overrides.css?v=733258503fb3cf5828de7332f1b0228d>
-    <link rel=stylesheet type=text/css href=https://use.fontawesome.com/releases/v5.6.3/css/all.css integrity=sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/ crossorigin=anonymous>
-    <link rel=stylesheet type=text/css href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css>
-    <link rel=stylesheet type=text/css href=css/theme.css?v=f719053e3cfe4c1db5d57d58fd0d7650>
-    <link href=//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic,700italic,900italic rel=stylesheet type=text/css>
-    <link rel=stylesheet type=text/css href=//cdn.jsdelivr.net/animatecss/3.2.0/animate.min.css media="screen, projection">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavita - Self-Hosted Digital Library</title>
+    <meta name="description" content="Lightning fast with a slick design, Kavita is a rocket fueled self-hosted digital library which supports a vast array of file formats. book reader, self hosted, manga, comics, free, manhwa, e readers, electronic book readers, digital book reader, cartoon, annotations, highlights">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" blocking="render">
+    <link rel="stylesheet" href="css/font-awesome/all.min.css" blocking="render">
+    <link rel="stylesheet" href="css/style.css" blocking="render">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" href="assets/icons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#4ac694">
-    <meta name="msapplication-config" content="assets/icons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-P27D95G');
+    </script>
 </head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="top-header" role="banner">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" aria-pressed="false" id="theme-toggle-mobile">
+            <i class="fas fa-moon" id="theme-icon-mobile" aria-hidden="true"></i>
+        </button>
+    </header>
 
-<body class=pull_top data-spy=scroll data-target=.header-navbar data-offset=70>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P27D95G"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role=navigation>
-        <div class=container>
-            <div class=navbar-header>
-                <button type=button class="navbar-toggle pull-right" data-toggle=collapse data-target=.navbar-ex1-collapse>
-                    <span class=sr-only>Toggle navigation</span>
-                    <span class=icon-bar></span>
-                    <span class=icon-bar></span>
-                    <span class=icon-bar></span>
-                </button>
-                <a href=#home class=navbar-brand><img src=img/logo.png alt="" aria-hidden="true"><span class=logo-text>Kavita</span></a>
-            </div>
-            <div class="collapse navbar-collapse navbar-ex1-collapse header-navbar" role=navigation>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href=#home><i class="fas fa-home" aria-hidden="true"></i> HOME</a></li>
-                    <li><a href=#features><i class="fas fa-star" aria-hidden="true"></i> FEATURES</a></li>
-                    <li><a href=#download><i class="fas fa-download" aria-hidden="true"></i> DOWNLOAD</a></li>
-                    <li><a href=#support><i class="fas fa-question-circle" aria-hidden="true"></i> SUPPORT</a></li>
-                    <li><a href="https://wiki.kavitareader.com/" target=_blank><i class="fas fa-lightbulb" aria-hidden="true"></i> WIKI</a></li>
-                    <li><a href=#demo><i class="fas fa-desktop" aria-hidden="true"></i> DEMO</a></li>
-                    <li><a href="https://www.kavitareader.com/docs/api/#/" target=_blank><i class="fab fa-dev" aria-hidden="true"></i> API</a></li>
-                    <li><a href="https://github.com/Kareadita/Kavita" target=_blank><i class="fab fa-github-alt" aria-hidden="true"></i> GITHUB</a></li>
-                </ul>
+    <main id="main-content" role="main" tabindex="-1">
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section">
+        <div class="parallax-bg">
+            <div class="parallax-shape shape-1" data-speed="0.5"></div>
+            <div class="parallax-shape shape-2" data-speed="0.3"></div>
+            <div class="parallax-shape shape-3" data-speed="0.7"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content" data-parallax="0.2">
+                    <h1>Ready to kick-start your next reading binge?</h1>
+                    <p class="tagline">
+                        Lightning fast with a slick design, Kavita is a rocket fueled self-hosted digital library which supports a vast array of file formats. Install to start reading and share your server with your friends.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="https://wiki.kavitareader.com/getting-started/#installation-methods" class="btn btn-primary-custom">
+                            <i class="fas fa-download me-2" aria-hidden="true"></i>Get Started
+                        </a>
+                        <a href="https://demo.kavitareader.com/login?apiKey=9003cf99-9213-4206-a787-af2fe4cc5f1f" class="btn btn-outline-custom">
+                            <i class="fas fa-play me-2" aria-hidden="true"></i>Try Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center mt-5 mt-lg-0" data-parallax="0.15">
+                    <img fetchpriority=high id="hero-image" src="about:blank" alt="Kavita on devices" class="img-fluid hero-image-transition hero-image-hidden" style="max-width: 100%; border-radius: 5px; box-shadow: 0 20px 60px var(--shadow);">
+                </div>
             </div>
         </div>
-    </div>
-    <div id=home></div>
-    <section id=hero style="margin-bottom: 20px" class="lol">
-        <img class="background" aria-hidden="true" alt="">
-        <img class="center" src="img/hero/example.png?6072023" alt="Kavita is on mobile and desktop" >
     </section>
 
-    <div id=summary class=summary>
-        <div class=container>
-            <div class=section-header>
-                <h3>Summary</h3>
-            </div>
-            <div class=container>
-                <div id=summary-text class=summary-text>
-                    Lightning fast with a slick design, Kavita is a rocket fueled self-hosted digital library which supports a vast array of file formats. Install to start reading and share your server with your friends.
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="container">
+            <!-- Single row with 4 columns: 2x2 grid -->
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 mb-5">
+                        <div class="stat-item">
+                            <div class="stat-number" id="active-installs" aria-live="polite" aria-atomic="true" aria-busy="true">
+                                <i class="fas fa-spinner fa-spin stat-loading" aria-hidden="true"></i>
+                                <span id="active-installs-display" aria-hidden="false">&nbsp;</span>
+                                <span id="active-installs-value" class="visually-hidden">Loading active installs</span>
+                            </div>
+                            <div class="stat-label">Active Installs</div>
+                        </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div id=demo class=features>
-        <div class=container>
-            <div class=section-header>
-                <h3>Demo</h3>
-            </div>
-            <div class=row>
-                <div style="margin-left: 15px">
-                    <p>
-                        We have a demo available at: <a href=https://demo.kavitareader.com/ target=_blank>https://demo.kavitareader.com</a>
-                    </p>
-                    <p>You can login with the following credentials:</p>
-                    <p>
-                        Username: <code>demouser</code><br>
-                        Password: <code>Demouser64</code>
-                    </p>
+                <div class="col-12 col-md-6 mb-5">
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            13+
+                        </div>
+                        <div class="stat-label">Languages</div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div id=features class=features>
-        <div class=container>
-            <div class=section-header>
-                <h3>Features</h3>
-            </div>
-            <div class="row feature">
-                <div class="col-sm-6 pic-right">
-                    <img src=img/features/homepage.png class="pull-right img-responsive" aria-hidden="true" alt="">
+
+                <div class="col-12 col-md-6 mb-5 mb-md-0">
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            33+
+                        </div>
+                        <div class="stat-label">Feature Requests Delivered</div>
+                    </div>
                 </div>
-                <div class="col-sm-6 info info-left">
-                    <h3>
-                        <i class="fas fa-chevron-right"></i>
-                        Homepage
-                    </h3>
-                    <p>
-                        Customize what's on your dashboard, bind smart filters, and reorder streams to get the layout you like
-                    </p>
+
+                <div class="col-12 col-md-6 mb-5 mb-md-0">
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            100%
+                        </div>
+                        <div class="stat-label">Free & Open Source</div>
+                    </div>
                 </div>
-            </div>
-            <div class="row feature">
-                <div class=col-sm-6>
-                    <img src=img/features/librarydetail_v0.8.3.png class=img-responsive aria-hidden="true" alt="">
-                </div>
-                <div class="col-sm-6 info">
-                    <h3>
-                        <i class="fas fa-chevron-right"></i>
-                        Browse your Manga, Comics and Books
-                    </h3>
-                    <p>
-                        Infinitely scroll through all your media in one place with quick access via the Jumpbar
-                    </p>
-                </div>
-            </div>
-            <div class="row feature">
-                <div class="col-sm-6 pic-right">
-                    <img src=img/features/search_v0.5.4.PNG class="pull-right img-responsive" aria-hidden="true" alt="">
-                </div>
-                <div class="col-sm-6 info info-left">
-                    <h3>
-                        <i class="fas fa-chevron-right"></i>
-                        Search
-                    </h3>
-                    <p>
-                        Full Text search to find files, bookmarks, reading lists, people, genres, series, etc
-                    </p>
-                </div>
-            </div>
-            <div class="row feature">
-                <div class=col-sm-6>
-                    <img src=img/features/metadatafiltering.png class=img-responsive aria-hidden="true" alt="">
-                </div>
-                <div class="col-sm-6 info">
-                    <h3>
-                        <i class="fas fa-chevron-right"></i>
-                        Metadata & Advanced Filtering
-                    </h3>
-                    <p>
-                        And/Or multiple filters for different metadata or features from Kavita to find exactly what you're looking for. Save that filter and bind it to your Side Nav or Dashboard.
-                    </p>
-                </div>
-            </div>
-            <div class="row feature">
-                <div class="col-sm-6 pic-right">
-                    <img src=img/features/ratings-reviews.png class="pull-right img-responsive" aria-hidden="true" alt="">
-                </div>
-                <div class="col-sm-6 info info-left">
-                    <h3>
-                        <i class="fas fa-chevron-right"></i>
-                        Ratings and Reviews
-                    </h3>
-                    <p>
-                        Built-in ratings and reviews per Series, users can share their reviews within the Server. External Ratings and Reviews possible with Kavita+
-                    </p>
-                </div>
-            </div>
-            <div class="row feature">
-                <div class="col-sm-6">
-                    <img src=img/features/mixedchaptersandvolumes.png class="pull-right img-responsive" aria-hidden="true" alt="">
-                </div>
-                <div class="col-sm-6 info info-right">
-                    <h3>
-                        <i class="fas fa-chevron-right"></i>
-                        Mixed Volume and Chapters
-                    </h3>
-                    <p>
-                        Chapters and volumes integrated next to each other, Chapters can group into Volumes based on filename
-                    </p>
-                </div>
-            </div>
-            <div class="row feature">
-                <div class="col-sm-6 pic-right">
-                    <img src=img/features/userandlibrarymgmt.png class="pull-right img-responsive" aria-hidden="true" alt="">
-                </div>
-                <div class="col-sm-6 info info-left">
-                    <h3>
-                        <i class="fas fa-chevron-right"></i>
-                        User & Library Management from anywhere
-                    </h3>
-                    <p>
-                        Rich User-based roles, authentication and library management right from the app
-                    </p>
-                </div>
-            </div>
-            <div class="row feature">
-                <div class="col-sm-6">
-                    <img src=img/features/new-reader.gif class="pull-right img-responsive" aria-hidden="true" alt="">
-                </div>
-                <div class="col-sm-6 info info-right">
-                    <h3>
-                        <i class="fas fa-chevron-right"></i>
-                        Built-in Image Reader
-                    </h3>
-                    <p>
-                        A responsive manga reader with impressive caching, never feel loading times when reading again. Supports webtoon and double page reading modes
-                    </p>
-                </div>
-            </div>
-            <div class="row feature">
-                <div class="col-sm-6 pic-right">
-                    <img src=img/features/book-reader.gif class="pull-right img-responsive" aria-hidden="true" alt="">
-                </div>
-                <div class="col-sm-6 info info-left">
-                    <h3>
-                        <i class="fas fa-chevron-right"></i>
-                        Built-in Epub and PDF readers
-                    </h3>
-                    <p>
-                        Customize your reading experience by controlling font, spacing, margin, color theme, and taping on edges of screen to navigate pages. Supports column and dual column mode with by-line progress resume mechanism
-                    </p>
-                </div>
-            </div>
-            <div class="row feature">
-                <div class="col-sm-6">
-                    <img src=img/features/stats.gif class="pull-right img-responsive" aria-hidden="true" alt="">
-                </div>
-                <div class="col-sm-6 info info-right">
-                    <h3>
-                        <i class="fas fa-chevron-right"></i>
-                        Server and User Stats
-                    </h3>
-                    <p>
-                        See interesting stats for your whole server or you as an individual
-                    </p>
-                </div>
-            </div>
-            <div class="row feature">
-                <div class="col-sm-6 pic-right">
-                    <img src=img/features/kavitaplus.gif class="pull-right img-responsive" aria-hidden="true" alt="">
-                </div>
-                <div class="col-sm-6 info info-left">
-                    <h3>
-                        <i class="fas fa-chevron-right"></i>
-                        Kavita+ Premium Features
-                    </h3>
-                    <p>
-                        Unlock External Reviews, Recommendations, Ratings, Scrobbling Support, <b>External Metadata Downloading</b>, and more for your whole server with a Kavita+ Subscription (optional)
-                    </p>
-                </div>
-            </div>
-            <div class="row feature">
-                <h3>And More!</h3>
-                <ul>
-                    <li id="file-support">Extensive File support</li>
-                    <ul aria-describedby="file-support">
-                        <li>Manga/Comics: ZIP, RAR, RAR5, CBR, CBZ, CB7, CBT, TAR.GZ, 7ZIP/7Z</li>
-                        <li>Books: EPUB2, EPUB3, PDF</li>
-                        <li>Raw Images: JPG/JPEG, PNG, WebP, GIF, AVIF</li>
-                    </ul>
-                    <li id="manga-reader">Manga/Comic Reader</li>
-                    <ul aria-describedby="manga-reader">
-                        <li>Image Scaling to fit your device screen or override for what feels best to you</li>
-                        <li>Image Splitting for those joined page spreads, don't scroll on your tablet, just split</li>
-                        <li>Fullscreen Mode</li>
-                        <li>Dual page reader mode with optional shadow to emulate reading a book</li>
-                        <li>Reading Direction: Left/Right, Up/Down</li>
-                        <li>Webtoon reader (scrolling) built in</li>
-                        <li>Read across archives without closing the reader</li>
-                    </ul>
-                    <li id="book-reader">Book Reader</li>
-                    <ul aria-describedby="book-reader">
-                        <li>Interactive reader - can interact with text, run javascript and streams pages to the UI</li>
-                        <li>Dark mode persists between page load</li>
-                        <li>Immersive mode, just you and the words</li>
-                        <li>Fullscreen Mode</li>
-                        <li>No scroll mode with virtual pages</li>
-                        <li>Dark, Black or White themes to enjoy on OLED and e-Ink devices</li>
-                        <li>Customize your reading experience with custom Font, Font Size, Margin, Reading Direction, Theme, etc</li>
-                        <li>Table of Content just a click away</li>
-                        <li>Remember line position and resume where you left off, no matter the device</li>
-                    </ul>
-                    <li id="pdf-reader">PDF Reader</li>
-                    <ul aria-describedby="pdf-reader">
-                        <li>Dedicated PDF reader to give you the best experience for your PDFs</li>
-                        <li>Offers light/dark mode and many customization options</li>
-                    </ul>
-                    <li id="usr-mgmt">User Management and Sharing</li>
-                    <ul aria-describedby="usr-mgmt">
-                        <li>Create users and share your libraries with them</li>
-                        <li>Grant users permissions to view libraries or see different mixed-media collections</li>
-                        <li>Built-in ratings and review for each of your users</li>
-                        <li>Age restriction for user accounts</li>
-                    </ul>
-                    <li>Cross Platform with no dependencies - Everything in the box</li>
-                    <li>Responsive and Fast! Built-in readers that fit to your device or use OPDS and interact with your favorite reader</li>
-                    <li>Full text search to quickly find what you want to read</li>
-                    <li>Group and Organize your files with collections, reading lists, series relationships, want to read lists, and more</li>
-                    <li>Mixed media Libraries - Light Novels and Manga can be right next to each other</li>
-                    <li>Fast and efficient library scans. Don't perform I/O if the underlying file hasn't changed.</li>
-                    <li>Full metadata support and filtering ability</li>
-                    <li>Send to Kindle or any email supported device for any user</li>
-                    <li>Built-in Child accounts - limit age ratings and libraries accounts have access to</li>
-                    <li>Folder watching capabilities - get changes without kicking off manual scans</li>
-                    <li>Rich documentation</li>
-                    <li>Full Community-based Localization support with 13+ languages</li>
-                    <li>Built-in Theme/(epub) Font downloading and updating</li>
-                    <li>Annotation/Highlight Support for Epubs with export to json</li>
-                    <li>External Metadata downloading with Kavita+</li>
-                    <li>Frequent updates with new features</li>
-                    <li>Available on many devices and platforms including <a target="_blank" href="https://wiki.kavitareader.com/guides/3rdparty/paperback/">Paperback</a>, 
-                        <a target="_blank" href="https://wiki.kavitareader.com/guides/3rdparty/tachi-like/">Mihon (Tachiyomi Fork)</a> and <a target="_blank" href="https://wiki.kavitareader.com/guides/3rdparty/cdisplayex/">CDisplayEx</a></li>
-                </ul>
             </div>
         </div>
     </div>
 
-
-
-    
-
-    <div id=download class="download">
-        <div class="container" style="padding-top: 20px">
-            <a class="btn btn-primary" style="background-color: #4ac694; color: white; border-color: #4ac694; width: 100%" href="https://wiki.kavitareader.com/getting-started/#installation-methods">
-                Get Started with Kavita
-            </a>
-        </div>
-    </div>
-
-    <div id=support class=support>
-        <div class=container>
-            <div class=section-header>
-                <h3>Support</h3>
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <p class="section-subtitle">Everything you need for the perfect reading experience</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                    <div class="feature-card">
+                        <div class="feature-card-header">
+                            <div class="feature-icon">
+                                    <i class="fas fa-users" aria-hidden="true"></i>
+                            </div>
+                            <h3>User Management</h3>
+                        </div>
+                        <p class="text-secondary">Use OIDC or built-in logins to manage your users. Restrict access based on library or age restrictions. Full control over who sees what, with granular permission settings.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="feature-card">
+                        <div class="feature-card-header">
+                            <div class="feature-icon">
+                                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                            </div>
+                            <h3>Built-in Readers</h3>
+                        </div>
+                        <p class="text-secondary">Dedicated, hand-crafted readers for EPUB, PDF, and image-based media (CBZ, loose images). Each reader is optimized for its format with features like webtoon mode, dual-page spreads, and custom styling.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="feature-card">
+                        <div class="feature-card-header">
+                            <div class="feature-icon">
+                                    <i class="fas fa-highlighter" aria-hidden="true"></i>
+                            </div>
+                            <h3>Annotation Support</h3>
+                        </div>
+                        <p class="text-secondary">Highlight and leave notes, share annotations with users on your server, and export to Obsidian—all out of the box. Your thoughts and insights preserved across devices.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="feature-card">
+                        <div class="feature-card-header">
+                            <div class="feature-icon">
+                                    <i class="fas fa-palette" aria-hidden="true"></i>
+                            </div>
+                            <h3>Customizable</h3>
+                        </div>
+                        <p class="text-secondary">Choose UI themes, custom EPUB reader fonts, and nav/homescreen bindable smart filters to truly customize Kavita—no coding necessary. Make it yours.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="feature-card">
+                        <div class="feature-card-header">
+                            <div class="feature-icon">
+                                    <i class="fas fa-database" aria-hidden="true"></i>
+                            </div>
+                            <h3>Metadata-Focused</h3>
+                        </div>
+                        <p class="text-secondary">Rich metadata support with advanced filtering and organization. Kavita scans and parses metadata from filenames and ComicInfo.xml. Enhance your library with external cover art, descriptions, ratings, and reviews through Kavita+.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="feature-card">
+                        <div class="feature-card-header">
+                            <div class="feature-icon">
+                                    <i class="fas fa-rocket" aria-hidden="true"></i>
+                            </div>
+                            <h3>Active Development</h3>
+                        </div>
+                        <p class="text-secondary">Frequent updates with new features and improvements. Strong community engagement through our <a href="https://github.com/Kareadita/Kavita/discussions/categories/ideas?discussions_q=category%3AIdeas&s=created&o=desc" target="_blank" rel="noopener noreferrer">feature request system where users vote on what matters most</a>. Your feedback directly shapes Kavita's roadmap.</p>
+                    </div>
+                </div>
             </div>
-            <div class=row>
-                <a class=col-sm-4 href=https://wiki.kavitareader.com/ target=_blank>
-                    <div class=text>
-                        <i class="far fa-lightbulb fa-2x"></i>
-                        <h4>Wiki</h4>
-                        <p>
-                            Check out the FAQ, Install instructions or other guides on how to use Kavita
-                        </p>
+
+            <!-- Extra Modern Features Grid -->
+            <div class="extra-features">
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <div class="extra-feature-card" role="article" aria-labelledby="feat-search">
+                            <div id="feat-search" class="extra-feature-title">Full-Text Search</div>
+                            <p class="extra-feature-desc">Fast, index-backed search across your entire library with filtering by metadata.</p>
+                        </div>
                     </div>
-                </a>
-                <a class=col-sm-4 href=https://discord.gg/b52wT37kt7 target=_blank>
-                    <div class=text>
-                        <i class="fab fa-discord fa-2x"></i>
-                        <h4>Discord</h4>
-                        <p>
-                            Join our Discord server for a chat or some support
-                        </p>
+
+                    <div class="col-6 col-md-3">
+                        <div class="extra-feature-card" role="article" aria-labelledby="feat-lists">
+                            <div id="feat-lists" class="extra-feature-title">Reading Lists</div>
+                            <p class="extra-feature-desc">Create curated lists, share them with friends, and pin reading queues for later.</p>
+                        </div>
                     </div>
-                </a>
-                <a class=col-sm-4 href=https://github.com/Kareadita/Kavita/issues target=_blank>
-                    <div class=text>
-                        <i class="fab fa-github fa-2x"></i>
-                        <h4>GitHub Issues</h4>
-                        <p>
-                            Track bugs and features for the things that matter to you
-                        </p>
+
+                    <div class="col-6 col-md-3">
+                        <div class="extra-feature-card" role="article" aria-labelledby="feat-ratings">
+                            <div id="feat-ratings" class="extra-feature-title">Ratings</div>
+                            <p class="extra-feature-desc">Rate items to build personalized recommendations and discover top-rated content.</p>
+                        </div>
                     </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div id=donate class=support>
-        <div class=container>
-            <div class=section-header>
-                <h3>Donate</h3>
-            </div>
-            <div class=row>
-                <a class=col-sm-6 href=https://www.paypal.com/paypalme/majora2007?locale.x=en_US target=_blank>
-                    <div class=text>
-                        <img src="img/paypal.png" height=32 width=32 class=img-responsive style="display: inline;" aria-hidden="true" alt="">
-                        <h4>Paypal</h4>
+
+                    <div class="col-6 col-md-3">
+                        <div class="extra-feature-card" role="article" aria-labelledby="feat-reviews">
+                            <div id="feat-reviews" class="extra-feature-title">Reviews</div>
+                            <p class="extra-feature-desc">User reviews with moderation tools help your community share opinions safely.</p>
+                        </div>
                     </div>
-                </a>
-                <a class=col-sm-6 href=https://opencollective.com/kavita target=_blank>
-                    <div class=text>
-                        <img src="img/open-collective.png" height=32 width=32 class=img-responsive style="display: inline;" aria-hidden="true" alt="">
-                        <h4>Open Collective</h4>
+
+                    <div class="col-6 col-md-3">
+                        <div class="extra-feature-card" role="article" aria-labelledby="feat-watch">
+                            <div id="feat-watch" class="extra-feature-title">Folder Watching</div>
+                            <p class="extra-feature-desc">Automatically import new files from watched folders for painless library updates.</p>
+                        </div>
                     </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <footer id=footer class=footer>
-        <div class=container>
-            <div class="row credits">
-                <div class=col-md-12>
-                    <div class="row copyright">
-                        <div class=col-md-12>
-                            © 2020-<span id=year></span> Kavita. All rights reserved.
+
+                    <div class="col-6 col-md-3">
+                        <div class="extra-feature-card" role="article" aria-labelledby="feat-send">
+                            <div id="feat-send" class="extra-feature-title">Send to Device</div>
+                            <p class="extra-feature-desc">One-click send to Kindle or other devices so you can read offline instantly.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="extra-feature-card" role="article" aria-labelledby="feat-opds">
+                            <div id="feat-opds" class="extra-feature-title">OPDS Support</div>
+                            <p class="extra-feature-desc">Expose your library to OPDS-enabled readers and third-party apps with ease.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="extra-feature-card" role="article" aria-labelledby="feat-restrict">
+                            <div id="feat-restrict" class="extra-feature-title">Rating Restrictions</div>
+                            <p class="extra-feature-desc">Restrict content visibility by rating with customizable age controls and policies.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <script src=//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js></script>
-    <script src=//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js></script>
-    <script src=js/tab-loader.js?v=5a66d54eb3de3529f67381a6ff983e99></script>
-    <script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
-    <script src=js/theme.js?v=453b4ff1a4f41c49315a28f79aa5ea83></script>
-    <script type=text/javascript src=js/index-slider.js?v=072006930bd52788bb7ab0a7d16861f7></script>
-</body>
+    </section>
 
+    <!-- Kavita+ Section -->
+    <section id="kavita-plus">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Kavita+</h2>
+                <p class="section-subtitle">Unlock premium features with our optional subscription service</p>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-12 col-xl-7">
+                    <div class="kavita-plus-content">
+                        <h3 class="mb-4">Enhance Your Reading Experience</h3>
+                        <p class="lead mb-4">Kavita+ is an <strong>optional</strong> premium service that brings advanced features to your self-hosted digital library. Sync progress with AniList, discover recommendations, and access rich metadata—all while supporting ongoing development.</p>
+                        
+                        <div class="kavita-plus-features">
+                            <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt" aria-hidden="true"></i>
+                    </div>
+                                <div class="feature-content">
+                                    <h5>Progress Sync</h5>
+                                    <p>Automatically sync your reading progress with AniList</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>External Ratings & Reviews</h5>
+                                    <p>Access ratings and reviews from AniList, MyAnimeList, and ComicBookRoundup</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-thumbs-up" aria-hidden="true"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Personalized Recommendations</h5>
+                                    <p>Get tailored reading suggestions based on your preferences</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-database" aria-hidden="true"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Automatic Metadata</h5>
+                                    <p>Download rich metadata without manual tagging</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-layer-group" aria-hidden="true"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Smart Collections</h5>
+                                    <p>Import MAL Interest Stacks and keep them synced</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-list" aria-hidden="true"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Want to Read Sync</h5>
+                                    <p>Sync your reading lists with MAL/AniList</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-5 text-center mt-5 mt-xl-0">
+                    <div class="kavita-plus-cta">
+                        <div class="cta-badge">Premium</div>
+                        <h4>Ready to Level Up?</h4>
+                        <p>Support development and unlock premium features</p>
+                        
+                        <div class="pricing-info">
+                            <div class="price-highlight">
+                                <span class="price">$2</span>
+                                <span class="period">first month</span>
+                            </div>
+                            <p class="coupon-code">
+                                Uses coupon code <strong>FIRSTTIME</strong> to get $2 off the first month.
+                            </p>
+                            <p class="price-regular">Then $4/month afterwards</p>
+                        </div>
+                        
+                        <a href="https://buy.stripe.com/00gcOanFajG0hi5ko?prefilled_promo_code=FIRSTTIME" target="_blank" rel="noopener noreferrer" class="btn btn-primary-custom btn-lg">
+                            <i class="fas fa-credit-card me-2" aria-hidden="true"></i>Get Started with Kavita+
+                        </a>
+                        
+                        <a href="https://wiki.kavitareader.com/kavita+/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-sm mt-3">
+                            <i class="fas fa-info-circle me-2" aria-hidden="true"></i>Learn More About Kavita+
+                        </a>
+                        
+                        <p class="mt-3 small text-muted">Secure payment via Stripe • Cancel anytime</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="subscription-info">
+                        <p class="mb-0"><i class="fas fa-info-circle me-2" aria-hidden="true"></i>Monthly subscription, node-locked to your server. All users benefit once activated.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section id="developer">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Build with Kavita</h2>
+                <p class="section-subtitle">Empower your projects with our open API</p>
+                <p>Developers, unleash your creativity! Our comprehensive REST API allows you to build custom integrations, mobile apps, and third-party tools that seamlessly connect with Kavita's powerful digital library features.</p>
+                <div class="code-example" role="region" aria-labelledby="developer-example-title">
+                    <h3 id="developer-example-title" class="visually-hidden">API quick example</h3>
+                    <pre tabindex="0" aria-label="JavaScript code example"><code class="language-javascript">// Example: Get your libraries
+fetch('/api/library')
+  .then(response => response.json())
+  .then(data => console.log(data));</code></pre>
+                </div>
+                <a href="https://www.kavitareader.com/docs/api/#/" class="btn btn-primary-custom btn-lg" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-code me-2" aria-hidden="true"></i>Explore API Documentation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="download">
+        <div class="container">
+            <div class="cta-section">
+                <h2>Start Your Reading Journey Today</h2>
+                <p class="mb-4" style="font-size: 1.1rem; opacity: 0.95;">
+                    Self-hosted, free, and open source. Get up and running in minutes.
+                </p>
+                <a href="https://wiki.kavitareader.com/getting-started/#installation-methods" class="btn btn-light btn-lg px-5">
+                    <i class="fas fa-rocket me-2" aria-hidden="true"></i>Install Kavita
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3" style="color: var(--primary);">
+                        <img src="https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/favicon.ico" alt="Kavita" style="width: 32px; height: 32px;"> <span class="brand-text">Kavita</span>
+                    </h5>
+                    <p class="text-secondary">
+                        A rocket fueled self-hosted digital library for all your reading needs.
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-8 d-flex justify-content-md-evenly justify-content-around">
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <h5 class="mb-3">Resources</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="https://wiki.kavitareader.com/" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fas fa-lightbulb me-2" aria-hidden="true"></i>Wiki</a></li>
+                            <li class="mb-2"><a href="https://www.kavitareader.com/docs/api/#/" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fas fa-code me-2" aria-hidden="true"></i>API Docs</a></li>
+                            <li class="mb-2"><a href="https://github.com/Kareadita/Kavita" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fab fa-github me-2" aria-hidden="true"></i>GitHub</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="mb-3">Community</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="https://discord.gg/b52wT37kt7" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fab fa-discord me-2" aria-hidden="true"></i>Discord</a></li>
+                            <li class="mb-2"><a href="https://github.com/Kareadita/Kavita/issues" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fas fa-bug me-2" aria-hidden="true"></i>Report Issues</a></li>
+                            <li class="mb-2"><a href="https://opencollective.com/kavita" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fas fa-heart me-2" aria-hidden="true"></i>Donate</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: var(--border-color); margin: 2rem 0;">
+            <div class="text-center text-secondary">
+                <p class="mb-0">© 2020-<span id="year"></span> Kavita. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js" defer></script>
+</body>
 </html>
