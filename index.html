@@ -4,19 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kavita - Self-Hosted Digital Library</title>
-    <meta name="description" content="Lightning fast with a slick design, Kavita is a rocket fueled self-hosted digital library which supports a vast array of file formats. book reader, self hosted, manga, comics, free, manhwa, e readers, electronic book readers, digital book reader, cartoon, annotations, highlights">
+    <meta name="description" content="Kavita — a fast, self-hosted digital library for comics, manga, EPUB and PDF. Built-in readers, OPDS, Docker-ready, OIDC, AniList/MAL sync and rich metadata.">
+    <meta name="keywords" content="kavita, self-hosted digital library, comics, manga, epub and pdf reader, webtoon mode, opds support, docker ready, oidc support, send to kindle support, offline reading, anilist and mal integration, metadata support">
+    <link rel="canonical" href="https://www.kavitareader.com/">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Kareadita">
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Kavita">
+    <meta property="og:title" content="Kavita — Self-Hosted Digital Library">
+    <meta property="og:description" content="Kavita — a fast, self-hosted digital library for comics, manga, EPUB and PDF. Built-in readers, OPDS, Docker-ready, OIDC, AniList/MAL sync and rich metadata.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kavitareader.com/">
+    <meta property="og:image" content="https://www.kavitareader.com/assets/images/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kavita — Self-Hosted Digital Library">
+    <meta name="twitter:description" content="Kavita — a fast, self-hosted digital library for comics, manga, EPUB and PDF. Built-in readers, OPDS, Docker-ready, OIDC, AniList/MAL sync and rich metadata.">
+    <meta name="twitter:image" content="https://www.kavitareader.com/assets/images/og-image.png">
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" blocking="render">
     <link rel="stylesheet" href="css/font-awesome/all.min.css" blocking="render">
     <link rel="stylesheet" href="css/style.css" blocking="render">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" href="assets/icons/favicon.ico">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-P27D95G');
-    </script>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-P27D95G');
+        </script>
+        <!-- JSON-LD: Organization + WebSite -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "name": "Kavita",
+                    "url": "https://www.kavitareader.com/",
+                    "logo": "https://www.kavitareader.com/assets/icons/favicon-192.png",
+                    "sameAs": [
+                        "https://github.com/Kareadita/Kavita",
+                        "https://discord.gg/b52wT37kt7",
+                        "https://wiki.kavitareader.com/"
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "url": "https://www.kavitareader.com/",
+                    "name": "Kavita",
+                    "inLanguage": "en-US",
+                }
+            ]
+        }
+        </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -40,7 +84,7 @@
                 <div class="col-lg-6 hero-content" data-parallax="0.2">
                     <h1>Ready to kick-start your next reading binge?</h1>
                     <p class="tagline">
-                        Lightning fast with a slick design, Kavita is a rocket fueled self-hosted digital library which supports a vast array of file formats. Install to start reading and share your server with your friends.
+                        Lightning fast and privacy-friendly, Kavita is a self‑hosted digital library for EPUB, PDF, comics and manga — with built‑in readers (single, double page, and webtoon mode), OPDS, and rich metadata. Install and share your server in minutes.
                     </p>
                     <div class="d-flex gap-3 flex-wrap">
                         <a href="https://wiki.kavitareader.com/getting-started/#installation-methods" class="btn btn-primary-custom">
@@ -107,7 +151,7 @@
     <section id="features">
         <div class="container">
             <h2 class="section-title">Powerful Features</h2>
-            <p class="section-subtitle">Everything you need for the perfect reading experience</p>
+            <p class="section-subtitle">Readers, metadata, search and OPDS for EPUB, PDF, comics &amp; manga</p>
             
             <div class="row g-4">
                 <div class="col-md-6 col-xl-4">
@@ -129,7 +173,7 @@
                             </div>
                             <h3>Built-in Readers</h3>
                         </div>
-                        <p class="text-secondary">Dedicated, hand-crafted readers for EPUB, PDF, and image-based media (CBZ, loose images). Each reader is optimized for its format with features like webtoon mode, dual-page spreads, and custom styling.</p>
+                        <p class="text-secondary">Dedicated, hand-crafted readers for EPUB, PDF, and image-based media (CBZ, loose images). Each reader is optimized for its format with features like webtoon mode, single page mode, dual-page (double page) spreads, and custom styling.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-xl-4">
@@ -183,7 +227,7 @@
                 <div class="row g-3">
                     <div class="col-6 col-md-3">
                         <div class="extra-feature-card" role="article" aria-labelledby="feat-search">
-                            <div id="feat-search" class="extra-feature-title">Full-Text Search</div>
+                            <div id="feat-search" class="extra-feature-title">Full-Text Search &amp; Indexing</div>
                             <p class="extra-feature-desc">Fast, index-backed search across your entire library with filtering by metadata.</p>
                         </div>
                     </div>
@@ -218,7 +262,7 @@
 
                     <div class="col-6 col-md-3">
                         <div class="extra-feature-card" role="article" aria-labelledby="feat-send">
-                            <div id="feat-send" class="extra-feature-title">Send to Device</div>
+                            <div id="feat-send" class="extra-feature-title">Send to Device (Send to Kindle)</div>
                             <p class="extra-feature-desc">One-click send to Kindle or other devices so you can read offline instantly.</p>
                         </div>
                     </div>
@@ -355,7 +399,7 @@
             <div class="text-center">
                 <h2 class="section-title">Build with Kavita</h2>
                 <p class="section-subtitle">Empower your projects with our open API</p>
-                <p>Developers, unleash your creativity! Our comprehensive REST API allows you to build custom integrations, mobile apps, and third-party tools that seamlessly connect with Kavita's powerful digital library features.</p>
+                <p>Developers, unleash your creativity! Our comprehensive REST API and OPDS feeds let you build custom integrations, mobile apps, and third-party tools that connect with Kavita's readers, metadata and sync features.</p>
                 <div class="code-example" role="region" aria-labelledby="developer-example-title">
                     <h3 id="developer-example-title" class="visually-hidden">API quick example</h3>
                     <pre tabindex="0" aria-label="JavaScript code example"><code class="language-javascript">// Example: Get your libraries
@@ -396,7 +440,7 @@ fetch('/api/library')
                         <img src="https://raw.githubusercontent.com/Kareadita/Wiki-Nextra/main/public/favicon.ico" alt="Kavita" style="width: 32px; height: 32px;"> <span class="brand-text">Kavita</span>
                     </h5>
                     <p class="text-secondary">
-                        A rocket fueled self-hosted digital library for all your reading needs.
+                        A self-hosted digital library for all your reading needs.
                     </p>
                 </div>
                 <div class="col-sm-12 col-md-8 d-flex justify-content-md-evenly justify-content-around">

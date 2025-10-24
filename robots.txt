@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.kavitareader.com/sitemap.xml
+
+# If you need to block staging or private paths, add Disallow rules here, e.g.:
+# Disallow: /private/
