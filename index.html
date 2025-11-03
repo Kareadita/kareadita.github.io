@@ -29,6 +29,15 @@
     <link rel="stylesheet" href="css/style.css" blocking="render">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" href="assets/icons/favicon.ico">
+    <!-- Prevent theme flash by setting theme before render -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

@@ -91,13 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Initialize theme from localStorage or system preference
+// Initialize theme UI elements (theme attribute already set in head to prevent flash)
 function initTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    const theme = document.documentElement.getAttribute('data-theme') || 'light';
     
-    document.documentElement.setAttribute('data-theme', theme);
     const icon = document.getElementById('theme-icon');
     const iconMobile = document.getElementById('theme-icon-mobile');
     if (icon) icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
