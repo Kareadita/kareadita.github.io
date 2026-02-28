@@ -17,6 +17,7 @@
     --border-color: #dee2e6;
     --shadow: rgba(0, 0, 0, 0.3);
     --bs-heading-color: var(--text-primary);
+    --bs-link-color-rgb: rgb(89, 150, 240);
 }
 
 [data-theme="dark"] {
